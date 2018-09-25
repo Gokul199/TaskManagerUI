@@ -1,0 +1,59 @@
+
+  <div class="col-md-10">      
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-md-2" for="Task">Task:</label>
+        <div class="col-md-5">
+          <input type="text" id="Task" name="Task" 
+          [(ngModel)]="Task" class="form-control col-md-4" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2" for="Priority">
+          Piority:</label>
+        <div class="col-md-5">
+          <input id="Priority" name="Priority" 
+          [(ngModel)]="Priority" class="form-control" 
+          type="range" min="1" max="30" step="5"
+          (change)="show_value()">          
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2" for="ParentTask">
+          Parent Task:</label>
+        <div class="col-md-5">
+          <input type="text" id="ParentTask" name="ParentTask" 
+          [(ngModel)]="ParentTask" class="form-control col-md-4" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2" for="StartDate">
+          Start Date:</label>
+        <div class="col-md-5">
+          <input type="text" id="StartDate" name="StartDate" 
+          [(ngModel)]="StartDate" class="form-control col-md-4" 
+          type="date">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-2" for="EndDate">
+          End Date:</label>
+        <div class="col-md-5">
+            <input type="text" id="EndDate" name="EndDate" 
+            [(ngModel)]="EndDate" class="form-control col-md-4" 
+            type="date">
+        </div>
+      </div>
+      <div class="form-group">
+          <div class="col-md-6">
+                <input type="submit" value="Add Task" 
+                class="col-md-offset-5 btn btn-primary" 
+                id="btnAddTask" (click)="AddTask()" 
+                [disabled]="!myForm.form.valid"/>                
+                <input type="button" value="Reset" 
+                class="col-md-offset-1 btn btn-secondary" 
+                id="btnReset" (click)="ResetFields()"/>                 
+            </div>
+        </div>
+      </form>
+  </div>

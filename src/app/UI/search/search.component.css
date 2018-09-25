@@ -1,0 +1,46 @@
+.textsearch{background-color: lightgrey;
+    width:8%;
+    outline: 0;
+    height:30px;}
+
+.textareasrch{background-color: lightgrey;
+        width:100%;
+        outline: 0;
+        height:25%;
+        align-content: center;
+        vertical-align: center;
+        padding-left: 10px;
+        padding-right: 10px;}
+
+::-webkit-input-placeholder{text-align:center;
+    vertical-align: center;
+-webkit-box-align:center; }
+    
+.labelsearch{font-style:bold;
+    font-size: 15px;
+    width:110px;
+    padding-left:2px; }
+    
+#divFirstSearch{padding-top: 10pt;
+    }
+    
+.divSearchFst{padding-top: 15pt;width:2000px;
+margin-left: auto;
+margin-right: auto;}
+
+.divSearch{padding-top: 15pt;width:800px;
+    margin-left: auto;
+    margin-right: auto;
+padding-bottom: 15pt;}
+
+.dotted{border-top:2px dotted black; }
+
+.dottedlight{border-top:1px dotted black; }
+
+.basicTblRow{width:20%;}
+
+.TextTblRow{width:20%;padding-right: 10px;}
+
+.buttons{width: 100%;
+    margin-left: 5mm;
+margin-right: 5mm;}
