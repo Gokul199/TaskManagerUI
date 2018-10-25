@@ -16,7 +16,7 @@ const httpOptions = {
  
 export class SharedService {
  
-  tasksUrl: string = "http://localhost:51812/api/task";
+  tasksUrl: string = "http://localhost/TaskManager.API/api/task";
  
   /** Generic Error Handler */
   private handleError<T>(operation = 'operation', result?: T) {
@@ -46,8 +46,8 @@ export class SharedService {
   }
  
   /** Service to Update Task */
-  updateTask(id: Number, task: Task): Observable<any> {    
-    const url = `${this.tasksUrl}/${id}`;
+  updateTask(id: Number, task: Task): Observable<any> {        
+    const url = `${this.tasksUrl}/${id}`;    
     return this.http.put(url, JSON.stringify(task), httpOptions);
   }
  

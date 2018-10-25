@@ -36,6 +36,7 @@ export class SearchComponent implements OnInit {
 
   gettasks()
   {    
+    debugger;
     this.Tasks=this.sharedservice.getTasks();
     this.Tasks.subscribe(data=>{this.filteredTasks=data});    
   }

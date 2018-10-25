@@ -34,7 +34,7 @@ export class EditComponent implements OnInit {
   }
 
   getTask()
-  {
+  {    
     const Id=this.route.snapshot.paramMap.get('id');  
     this.sharedservice.getTask(parseInt(this.route.snapshot.paramMap.get('id'))).subscribe(data=>
     {
@@ -48,7 +48,8 @@ export class EditComponent implements OnInit {
   }
 
   updateTask()
-  {       
+  {     
+    debugger;      
     let taskdata:Task={
       TaskID:this.TaskID,
       Task:this.Task,
@@ -58,7 +59,7 @@ export class EditComponent implements OnInit {
       EndDate:this.EndDate
 
     };
-    this.sharedservice.updateTask(this.TaskID,taskdata).subscribe(()=>{});            
+    this.sharedservice.updateTask(this.TaskID,taskdata).subscribe(()=>{});                
     this.router.navigate(['/search']);
   }
 
